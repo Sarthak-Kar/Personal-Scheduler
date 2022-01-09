@@ -1,33 +1,283 @@
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scheduler</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Scheduler</title>
+  <body>
+    <input type="text" id="assignment" placeholder="Task..." />
+    <input type="date" id="date" placeholder="Date" />
+    <input type="number" id="parts" placeholder="Parts" />
+    <button type="button" onclick="process()">Add</button>
+    <br /><br />
+    <button type="button" onclick="prev()">Prev</button>
+    <button type="button" onclick="next()">Next</button>
+    <br />
+    <br />
+    <br />
+    <link rel="stylesheet" href="style.css" />
+    <span id="date1" style="font-weight: bold"></span>
+    <span
+      id="day1task1"
+      onclick="show('day1task1', 'date1')"
+      style="margin-left: 70px"
+      >No task</span
+    ><span
+      id="day1task2"
+      onclick="show('day1task2', 'date1')"
+      style="margin-left: 70px"
+      ;
+    ></span
+    ><span
+      id="day1task3"
+      onclick="show('day1task3', 'date1')"
+      style="margin-left: 70px"
+      ;
+    ></span
+    ><span
+      id="day1task4"
+      onclick="show('day1task4', 'date1')"
+      style="margin-left: 70px"
+      ;
+    ></span
+    ><span
+      id="day1task5"
+      onclick="show('day1task5', 'date1')"
+      style="margin-left: 70px"
+      ;
+    ></span
+    ><span
+      id="day1task6"
+      onclick="show('day1task6', 'date1')"
+      style="margin-left: 70px"
+      ;
+    ></span
+    ><br /><br />
+    <span id="date2" style="font-weight: bold"></span>
+    <span
+      id="day2task1"
+      onclick="show('day2task1', 'date2')"
+      style="margin-left: 70px"
+      >No task</span
+    ><span
+      id="day2task2"
+      onclick="show('day2task2', 'date2')"
+      style="margin-left: 70px"
+      ;
+    ></span
+    ><span
+      id="day2task3"
+      onclick="show('day2task3', 'date2')"
+      style="margin-left: 70px"
+      ;
+    ></span
+    ><span
+      id="day2task4"
+      onclick="show('day2task4', 'date2')"
+      style="margin-left: 70px"
+      ;
+    ></span
+    ><span
+      id="day2task5"
+      onclick="show('day2task5', 'date2')"
+      style="margin-left: 70px"
+      ;
+    ></span
+    ><span
+      id="day2task6"
+      onclick="show('day2task6', 'date2')"
+      style="margin-left: 70px"
+      ;
+    ></span
+    ><br /><br />
+    <span id="date3" style="font-weight: bold"></span>
+    <span
+      id="day3task1"
+      onclick="show('day3task1', 'date3')"
+      style="margin-left: 70px"
+      >No task</span
+    ><span
+      id="day3task2"
+      onclick="show('day3task2', 'date3')"
+      style="margin-left: 70px"
+      ;
+    ></span
+    ><span
+      id="day3task3"
+      onclick="show('day3task3', 'date3')"
+      style="margin-left: 70px"
+      ;
+    ></span
+    ><span
+      id="day3task4"
+      onclick="show('day3task4', 'date3')"
+      style="margin-left: 70px"
+      ;
+    ></span
+    ><span
+      id="day3task5"
+      onclick="show('day3task5', 'date3')"
+      style="margin-left: 70px"
+      ;
+    ></span
+    ><span
+      id="day3task6"
+      onclick="show('day3task6', 'date3')"
+      style="margin-left: 70px"
+      ;
+    ></span
+    ><br /><br />
+    <span id="date4" style="font-weight: bold"></span>
+    <span
+      id="day4task1"
+      onclick="show('day4task1', 'date4')"
+      style="margin-left: 70px"
+      >No task</span
+    ><span
+      id="day4task2"
+      onclick="show('day4task2', 'date4')"
+      style="margin-left: 70px"
+      ;
+    ></span
+    ><span
+      id="day4task3"
+      onclick="show('day4task3', 'date4')"
+      style="margin-left: 70px"
+      ;
+    ></span
+    ><span
+      id="day4task4"
+      onclick="show('day4task4', 'date4')"
+      style="margin-left: 70px"
+      ;
+    ></span
+    ><span
+      id="day4task5"
+      onclick="show('day4task5', 'date4')"
+      style="margin-left: 70px"
+      ;
+    ></span
+    ><span
+      id="day4task6"
+      onclick="show('day4task6', 'date4')"
+      style="margin-left: 70px"
+      ;
+    ></span
+    ><br /><br />
+    <span id="date5" style="font-weight: bold"></span>
+    <span
+      id="day5task1"
+      onclick="show('day5task1', 'date5')"
+      style="margin-left: 70px"
+      >No task</span
+    ><span
+      id="day5task2"
+      onclick="show('day5task2', 'date5')"
+      style="margin-left: 70px"
+      ;
+    ></span
+    ><span
+      id="day5task3"
+      onclick="show('day5task3', 'date5')"
+      style="margin-left: 70px"
+      ;
+    ></span
+    ><span
+      id="day5task4"
+      onclick="show('day5task4', 'date5')"
+      style="margin-left: 70px"
+      ;
+    ></span
+    ><span
+      id="day5task5"
+      onclick="show('day5task5', 'date5')"
+      style="margin-left: 70px"
+      ;
+    ></span
+    ><span
+      id="day5task6"
+      onclick="show('day5task6', 'date5')"
+      style="margin-left: 70px"
+      ;
+    ></span
+    ><br /><br />
+    <span id="date6" style="font-weight: bold"></span>
+    <span
+      id="day6task1"
+      onclick="show('day6task1', 'date6')"
+      style="margin-left: 70px"
+      >No task</span
+    ><span
+      id="day6task2"
+      onclick="show('day6task2', 'date6')"
+      style="margin-left: 70px"
+      ;
+    ></span
+    ><span
+      id="day6task3"
+      onclick="show('day6task3', 'date6')"
+      style="margin-left: 70px"
+      ;
+    ></span
+    ><span
+      id="day6task4"
+      onclick="show('day6task4', 'date6')"
+      style="margin-left: 70px"
+      ;
+    ></span
+    ><span
+      id="day6task5"
+      onclick="show('day6task5', 'date6')"
+      style="margin-left: 70px"
+      ;
+    ></span
+    ><span
+      id="day6task6"
+      onclick="show('day6task6', 'date6')"
+      style="margin-left: 70px"
+      ;
+    ></span
+    ><br /><br />
+    <span id="date7" style="font-weight: bold"></span>
+    <span
+      id="day7task1"
+      onclick="show('day7task1', 'date7')"
+      style="margin-left: 70px"
+      >No task</span
+    ><span
+      id="day7task2"
+      onclick="show('day7task2', 'date7')"
+      style="margin-left: 70px"
+      ;
+    ></span
+    ><span
+      id="day7task3"
+      onclick="show('day7task3', 'date7')"
+      style="margin-left: 70px"
+      ;
+    ></span
+    ><span
+      id="day7task4"
+      onclick="show('day7task4', 'date7')"
+      style="margin-left: 70px"
+      ;
+    ></span
+    ><span
+      id="day7task5"
+      onclick="show('day7task5', 'date7')"
+      style="margin-left: 70px"
+      ;
+    ></span
+    ><span
+      id="day7task6"
+      onclick="show('day7task6', 'date7')"
+      style="margin-left: 70px"
+      ;
+    ></span
+    ><br /><br />
 
-
-</head>
-
-<body>
-  <input type="text" id="assignment" placeholder="Task...">
-  <input type="date" id="date" placeholder="Date">
-  <input type="number" id="parts" placeholder="Parts">
-  <button type="button" onclick="process()">Add</button>
-  <br><br>
-  <button type="button" onclick="prev()">Prev</button>
-  <button type="button" onclick="next()">Next</button>
-  <br> <br> <br>
-  <link rel="stylesheet" href="style.css">
-  <span id="date1" style="font-weight:bold"></span> <span id="day1task1" onclick="show('day1task1', 'date1')" style="margin-left: 70px;";>No task</span><span id="day1task2" onclick="show('day1task2', 'date1')" style="margin-left: 70px" ;></span><span id="day1task3" onclick="show('day1task3', 'date1')" style="margin-left: 70px" ;></span><span id="day1task4" onclick="show('day1task4', 'date1')"style="margin-left: 70px" ;></span><span id="day1task5" onclick="show('day1task5', 'date1')"style="margin-left: 70px" ;></span><span id="day1task6" onclick="show('day1task6', 'date1')"style="margin-left: 70px" ;></span><br><br>
-  <span id="date2" style="font-weight:bold"></span> <span id="day2task1" onclick="show('day2task1', 'date2')" style="margin-left: 70px" ;>No task</span><span id="day2task2" onclick="show('day2task2', 'date2')" style="margin-left: 70px" ;></span><span id="day2task3" onclick="show('day2task3', 'date2')" style="margin-left: 70px" ;></span><span id="day2task4" onclick="show('day2task4', 'date2')"style="margin-left: 70px" ;></span><span id="day2task5" onclick="show('day2task5', 'date2')"style="margin-left: 70px" ;></span><span id="day2task6" onclick="show('day2task6', 'date2')"style="margin-left: 70px" ;></span><br><br>
-  <span id="date3" style="font-weight:bold"></span> <span id="day3task1" onclick="show('day3task1', 'date3')" style="margin-left: 70px" ;>No task</span><span id="day3task2" onclick="show('day3task2', 'date3')" style="margin-left: 70px" ;></span><span id="day3task3" onclick="show('day3task3', 'date3')" style="margin-left: 70px" ;></span><span id="day3task4" onclick="show('day3task4', 'date3')"style="margin-left: 70px" ;></span><span id="day3task5" onclick="show('day3task5', 'date3')"style="margin-left: 70px" ;></span><span id="day3task6" onclick="show('day3task6', 'date3')"style="margin-left: 70px" ;></span><br><br>
-  <span id="date4" style="font-weight:bold"></span> <span id="day4task1" onclick="show('day4task1', 'date4')" style="margin-left: 70px" ;>No task</span><span id="day4task2" onclick="show('day4task2', 'date4')" style="margin-left: 70px" ;></span><span id="day4task3" onclick="show('day4task3', 'date4')" style="margin-left: 70px" ;></span><span id="day4task4" onclick="show('day4task4', 'date4')"style="margin-left: 70px" ;></span><span id="day4task5" onclick="show('day4task5', 'date4')"style="margin-left: 70px" ;></span><span id="day4task6" onclick="show('day4task6', 'date4')"style="margin-left: 70px" ;></span><br><br>
-  <span id="date5" style="font-weight:bold"></span> <span id="day5task1" onclick="show('day5task1', 'date5')" style="margin-left: 70px" ;>No task</span><span id="day5task2" onclick="show('day5task2', 'date5')" style="margin-left: 70px" ;></span><span id="day5task3" onclick="show('day5task3', 'date5')" style="margin-left: 70px" ;></span><span id="day5task4" onclick="show('day5task4', 'date5')"style="margin-left: 70px" ;></span><span id="day5task5" onclick="show('day5task5', 'date5')"style="margin-left: 70px" ;></span><span id="day5task6" onclick="show('day5task6', 'date5')"style="margin-left: 70px" ;></span><br><br>
-  <span id="date6" style="font-weight:bold"></span> <span id="day6task1" onclick="show('day6task1', 'date6')" style="margin-left: 70px" ;>No task</span><span id="day6task2" onclick="show('day6task2', 'date6')" style="margin-left: 70px" ;></span><span id="day6task3" onclick="show('day6task3', 'date6')" style="margin-left: 70px" ;></span><span id="day6task4" onclick="show('day6task4', 'date6')"style="margin-left: 70px" ;></span><span id="day6task5" onclick="show('day6task5', 'date6')"style="margin-left: 70px" ;></span><span id="day6task6" onclick="show('day6task6', 'date6')"style="margin-left: 70px" ;></span><br><br>
-  <span id="date7" style="font-weight:bold"></span> <span id="day7task1" onclick="show('day7task1', 'date7')" style="margin-left: 70px" ;>No task</span><span id="day7task2" onclick="show('day7task2', 'date7')" style="margin-left: 70px" ;></span><span id="day7task3" onclick="show('day7task3', 'date7')" style="margin-left: 70px" ;></span><span id="day7task4" onclick="show('day7task4', 'date7')"style="margin-left: 70px" ;></span><span id="day7task5" onclick="show('day7task5', 'date7')"style="margin-left: 70px" ;></span><span id="day7task6" onclick="show('day7task6', 'date7')"style="margin-left: 70px" ;></span><br><br>
-
-  <script src="index.js"></script>
-</body>
-
+    <script src="index.js"></script>
+  </body>
 </html>
